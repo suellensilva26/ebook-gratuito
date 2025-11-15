@@ -1,4 +1,4 @@
-# Landing Page - Ebooks Gratuitos ENEM 2025
+# 📚 Landing Page - Ebooks Gratuitos ENEM 2025
 
 Landing page premium em Next.js 14 para captura de leads oferecendo 3 ebooks gratuitos sobre preparação ENEM 2025.
 
@@ -8,55 +8,40 @@ Landing page premium em Next.js 14 para captura de leads oferecendo 3 ebooks gra
 - **TypeScript** - Tipagem estática
 - **Tailwind CSS** - Estilização
 - **Framer Motion** - Animações
-- **Supabase** - Backend para captura de leads
-- **React Input Mask** - Máscara para telefone
+- **Formspree** - Captura de leads via email
+- **Google Drive** - Hospedagem dos ebooks para download
 
 ## 📋 Pré-requisitos
 
 - Node.js 18+ instalado
-- Conta no Supabase (para captura de leads)
+- Conta no Formspree (gratuita) - [formspree.io](https://formspree.io)
+- Google Drive com pasta compartilhada (para os ebooks)
 
 ## 🛠️ Instalação
 
-1. Clone o repositório ou navegue até a pasta do projeto
+1. Clone o repositório:
+```bash
+git clone https://github.com/suellensilva26/ebook-gratuito.git
+cd ebook-gratuito
+```
 
 2. Instale as dependências:
 ```bash
 npm install
 ```
 
-3. Configure as variáveis de ambiente:
+3. Configure as variáveis de ambiente (opcional):
 ```bash
-cp .env.example .env
+cp env.example .env.local
 ```
 
-Edite o arquivo `.env` e adicione suas credenciais do Supabase:
+Edite o arquivo `.env.local` se necessário (os links principais já estão hardcoded no código):
 ```
-NEXT_PUBLIC_SUPABASE_URL=sua_url_do_supabase
-NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anonima_do_supabase
-```
-
-4. Configure o Supabase:
-
-Crie uma tabela chamada `leads_ebooks` com a seguinte estrutura:
-
-```sql
-CREATE TABLE leads_ebooks (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  nome TEXT NOT NULL,
-  email TEXT NOT NULL UNIQUE,
-  telefone TEXT,
-  data_criacao TIMESTAMP DEFAULT NOW(),
-  origem TEXT DEFAULT 'landing_ebooks',
-  cupom_codigo TEXT DEFAULT 'NEURO100',
-  cupom_valor NUMERIC DEFAULT 100,
-  link_telegram_enviado BOOLEAN DEFAULT false
-);
-
-CREATE INDEX idx_email ON leads_ebooks(email);
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXX (opcional)
+NEXT_PUBLIC_APP_LINK=https://seu-app.com (opcional)
 ```
 
-5. Execute o projeto em desenvolvimento:
+4. Execute o projeto em desenvolvimento:
 ```bash
 npm run dev
 ```
@@ -67,7 +52,6 @@ Acesse [http://localhost:3000](http://localhost:3000)
 
 ```
 ├── app/
-│   ├── api/leads/        # API route para captura de leads
 │   ├── sucesso/          # Página de sucesso após download
 │   ├── layout.tsx        # Layout principal
 │   ├── page.tsx          # Página inicial
@@ -75,14 +59,13 @@ Acesse [http://localhost:3000](http://localhost:3000)
 ├── components/
 │   ├── Hero.tsx          # Seção hero com countdown
 │   ├── EbooksSection.tsx # Cards dos 3 ebooks
-│   ├── FormSection.tsx   # Formulário de captura
+│   ├── FormSection.tsx   # Formulário de captura (Formspree)
 │   ├── Testimonials.tsx  # Depoimentos
 │   ├── FAQ.tsx           # FAQ accordion
 │   ├── FinalCTA.tsx      # Última CTA com urgência
 │   ├── Footer.tsx        # Rodapé
-│   └── CountdownTimer.tsx # Timer de countdown
-├── lib/
-│   └── supabase.ts       # Cliente Supabase
+│   ├── CountdownTimer.tsx # Timer de countdown
+│   └── GoogleAnalytics.tsx # Google Analytics 4
 └── public/               # Arquivos estáticos
 ```
 
@@ -121,14 +104,30 @@ Consulte o arquivo `.env.example` para todas as variáveis necessárias.
 
 ## 🔧 Funcionalidades
 
-- ✅ Formulário de captura com validação
-- ✅ Verificação de email duplicado
-- ✅ Countdown timer em tempo real
+- ✅ Formulário de captura com Formspree (envia email automaticamente)
+- ✅ Validação em tempo real
+- ✅ Countdown timer até 23h59
 - ✅ Animações com Framer Motion
-- ✅ Design responsivo
-- ✅ Integração Supabase
-- ✅ Página de sucesso com links de download
-- ✅ Meta tags SEO
+- ✅ Design responsivo mobile-first
+- ✅ Integração Google Drive para download dos ebooks
+- ✅ Página de sucesso com links diretos
+- ✅ Botões Telegram e WhatsApp funcionais
+- ✅ Google Analytics 4 integrado
+- ✅ Meta tags SEO otimizadas
+
+## 📚 Ebooks no Google Drive
+
+Os 3 ebooks estão hospedados no Google Drive:
+- Link da pasta: `https://drive.google.com/drive/folders/1fgOQQ8UP3z5_50Qm6IrczDfAwzbYyuQ2`
+- Funciona perfeitamente no celular
+- Download direto dos PDFs
+
+## 🔗 Links Integrados
+
+- **Formspree ID:** `mvgdzwvy` (já configurado)
+- **Telegram:** `https://t.me/+vyNGKyTygNY1ODQx`
+- **WhatsApp:** `https://chat.whatsapp.com/KPQjKZF3LfMEbH9dDo7u11`
+- **Google Drive:** Link da pasta com os 3 ebooks
 
 ## 📄 Licença
 
