@@ -146,11 +146,11 @@ function SucessoContent() {
                 📱 <strong>Como baixar no celular:</strong>
               </p>
               <ol className="text-sm text-blue-200 mt-2 text-left list-decimal list-inside space-y-1">
-                <li>Clique no botão "ABRIR PASTA COM OS 3 EBOOKS" acima</li>
+                <li>Clique no botão &quot;ABRIR PASTA COM OS 3 EBOOKS&quot; acima</li>
                 <li>A pasta do Google Drive abrirá com os 3 PDFs</li>
                 <li>Toque em cada PDF para visualizar</li>
                 <li>No canto superior direito, toque nos 3 pontos (⋮)</li>
-                <li>Selecione "Fazer download" para salvar no celular</li>
+                <li>Selecione &quot;Fazer download&quot; para salvar no celular</li>
               </ol>
             </div>
           </div>
