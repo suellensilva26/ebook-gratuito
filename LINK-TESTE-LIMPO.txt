@@ -1,0 +1,41 @@
+🌐 LINKS PARA TESTE (SEM CACHE)
+
+✅ LINK PRINCIPAL (localhost):
+http://localhost:3000
+
+✅ LINK ALTERNATIVO (IP local):
+http://192.168.1.15:3000
+
+✅ LINK COM PARÂMETRO (força reload):
+http://localhost:3000/?v=1
+http://localhost:3000/?v=2
+http://localhost:3000/?v=3
+
+✅ LINK COM HASH (limpa cache):
+http://localhost:3000/#form?v=novo
+
+📱 Para testar no celular (mesma Wi-Fi):
+http://192.168.1.15:3000
+
+🔧 COMO LIMPAR CACHE NO NAVEGADOR:
+
+Chrome/Edge:
+1. Pressione Ctrl+Shift+Delete
+2. Selecione "Cookies" e "Imagens em cache"
+3. Período: "Última hora"
+4. Clique em "Limpar dados"
+
+OU use modo anônimo:
+Ctrl+Shift+N (Chrome)
+Ctrl+Shift+P (Firefox)
+
+🔄 FORÇAR RELOAD SEM CACHE:
+Ctrl+Shift+R (Windows/Linux)
+Cmd+Shift+R (Mac)
+
+✅ STATUS:
+- Código salvo
+- Chave Supabase atualizada
+- Arquivos conflitantes removidos
+- Pronto para testar!
+

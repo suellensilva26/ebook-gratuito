@@ -1,0 +1,41 @@
+🌐 LINK PARA TESTE - COMO UM USUÁRIO NORMAL
+
+✅ LINK PRINCIPAL (use este):
+http://localhost:3000
+
+📱 Para testar no celular (mesma Wi-Fi):
+http://192.168.1.15:3000
+
+---
+
+🧪 COMO TESTAR COMO USUÁRIO:
+
+1. Abra o navegador
+2. Digite: http://localhost:3000
+3. Role a página até ver o formulário
+4. Preencha:
+   - Nome: Seu nome completo
+   - Email: seu@email.com
+   - WhatsApp: (11) 99999-9999
+5. Marque o checkbox
+6. Clique em "RECEBER OS 3 EBOOKS AGORA"
+7. Aguarde a mensagem de sucesso
+8. Será redirecionado para página de sucesso
+9. Na página de sucesso, teste:
+   - Botão Telegram
+   - Botão WhatsApp
+   - Links dos ebooks (quando configurados)
+
+---
+
+✅ TUDO FUNCIONANDO:
+- ✅ Formspree ativo (sem Supabase)
+- ✅ Botões Telegram e WhatsApp funcionais
+- ✅ Página de sucesso funcionando
+- ✅ Sem erros
+
+---
+
+💡 DICA:
+Use modo anônimo (Ctrl+Shift+N) para testar sem cache!
+

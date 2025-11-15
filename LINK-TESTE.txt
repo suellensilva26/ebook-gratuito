@@ -1,0 +1,25 @@
+✅ SERVIDOR RODANDO!
+
+🌐 LINK PARA TESTE:
+
+LOCAL (neste computador):
+http://localhost:3000
+
+REDE LOCAL (outros dispositivos na mesma Wi-Fi):
+http://192.168.1.15:3000
+
+📱 Para acessar de celular/tablet:
+1. Conecte na mesma rede Wi-Fi
+2. Abra o navegador
+3. Digite: http://192.168.1.15:3000
+
+⚠️ IMPORTANTE:
+- O formulário não vai salvar no Supabase ainda (precisa configurar)
+- Mas você pode ver toda a página funcionando!
+- Para parar o servidor: Ctrl+C no terminal
+
+🔧 Para configurar Supabase depois:
+1. Crie conta em https://supabase.com
+2. Execute o SQL de supabase-setup.sql
+3. Atualize o .env.local com suas credenciais
+
